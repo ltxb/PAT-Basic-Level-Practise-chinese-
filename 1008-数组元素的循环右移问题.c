@@ -38,8 +38,9 @@ int main()
     return 0;
 }
 
-/*--以下实现代码简单易理解，但算法的时复杂度为M*n--*/
-/*
+
+//以下实现代码简单易理解，但算法的时复杂度为M*n
+
 void ArrayLoopRight(int *a,int n,int m) //每轮移1位，共移M轮
 {
     int i,j,tem;
@@ -51,10 +52,10 @@ void ArrayLoopRight(int *a,int n,int m) //每轮移1位，共移M轮
         a[0]=tem;
     }
 }
-*/
 
-/*---以下实现方式不易理解，但算法时间复杂度是n---*/
 
+//---以下实现方式不易理解，但算法时间复杂度是n,更关键的是提交后部分没通过，正在找原因。
+/*
 int GreatComDivisor(int m,int n)
 {
     int tem;
@@ -79,5 +80,5 @@ void ArrayLoopRight(int *a,int n,int m)
         a[m-i]=tem;   //a[m-i]由a[(m*n-i-(n/k-2+1)*m)%n]简化而来
     }
 }
-
+*/
             

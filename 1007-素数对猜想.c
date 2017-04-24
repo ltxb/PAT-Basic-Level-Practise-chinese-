@@ -16,6 +16,7 @@
 */
 
 #include<stdio.h>
+#include<math.h>
 
 int IsPrime(int);               //To determine whether a number is prime
 int CalcuPrimePair(int);        //Calculate the number of prime pairs
@@ -33,7 +34,7 @@ int IsPrime(int n)
 {
     int isPri=1;
     int i;
-    int k=n/2;
+    double k=sqrt(n);
     for(i=2;i<=k;i++)
     {
         if(n%i==0)
