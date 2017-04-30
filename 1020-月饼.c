@@ -32,12 +32,12 @@ typedef struct moonCake
 }MoonCake;
 
 
-void SwapMC(MoonCake *m,MoonCake *n);
-void SortMC(MoonCake *m,int n);
+void SwapMC(MoonCake *m,MoonCake *n);    //交换两个月饼的属性值
+void SortMC(MoonCake *m,int n);          //将所有种类月饼按单价从大到小排序
 
 int main()
 {
-    double maxGains=0;
+    double maxGains=0;  //最大收益
     int kind,demand,i;
     scanf("%d %d",&kind,&demand);
     MoonCake mc[kind];
@@ -56,7 +56,7 @@ int main()
 
     SortMC(mc,kind);
     
-    for(i=0;i<kind&&demand>0;i++)
+    for(i=0;(i<kind)&&(demand>0);i++)
     {
         if(mc[i].inventory>=demand)
         {
@@ -92,7 +92,7 @@ void SwapMC(MoonCake *m,MoonCake *n)
 void SortMC(MoonCake *m,int n)
 {
     int i,j,k;
-    for(i=n-1;i>0;i++)
+    for(i=n-1;i>0;i--)
     {
         k=0;
         for(j=0;j<i;j++)
